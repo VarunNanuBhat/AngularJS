@@ -5,9 +5,12 @@
 		<title = "First example"></title>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 	</head>
+	<!--Body tag is the owner of AngularJS application -->
 	<body ng-app>
 		<h1>Sample Application</h1>
+		<!--ng-model directive binds the value of the input field to the application variable "textPrinter" -->
 		<input type = "text" ng-model = "textPrinter" placeholder = "Write your text">
+		<!--ng-bind directive binds the content of h2 element to the application variable "textPrinter" -->
 		<p>The text entered is <span ng-bind = "textPrinter"/> </p>
 
 	</body>

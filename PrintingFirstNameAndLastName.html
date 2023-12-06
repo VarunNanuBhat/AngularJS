@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+
+<html lang = "en">
+	<head>
+		<title = "First example"></title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	</head>
+
+	<!--Body tag is the owner of AngularJS application -->
+	<body ng-app>
+		<h1> Enter first name </h1>
+		<!--ng-model directive binds the value of the input field to the application variable "firstName" -->
+		<input type="text" ng-model = "firstName" placeholder="first name">
+		<h1> Enter last name </h1>
+		<!--ng-model directive binds the value of the input field to the application variable "lastName" -->
+		<input type="text" ng-model = "lastName" placeholder="last name">
+		<!--ng-bind directive binds the content of h2 element to the application variable "firstName" and lastName -->
+		<h2>The entered name is <span ng-bind="firstName + ' ' + lastName"/> 
+		
+	</body>
+</html>
