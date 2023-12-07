@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+	<head>
+		<title = "MathExpression"></title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	</head>
+
+	<body ng-app>
+        <h1>Sample Math Operation</h1>
+		<p ng-init = "internal_marks=35;external_marks=30;
+		student = {firstname:'Varun',lastname:'Bhat',USN:103};
+        marks = [80,90,75,73,60]"></p>
+         <p>Hello {{student.firstname + " " + student.lastname}}!</p>
+         <p>Marks in M4 : {{internal_marks + external_marks}} marks</p>
+         <p>USN No: {{student.USN}}</p>
+         <p>Marks(Math): {{marks[3]}}</p>
+	</body>
+</html>
+
+
+
+
