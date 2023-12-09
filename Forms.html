@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+	<head>
+		<title>Form</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	</head>
+    <body ng-app>
+        <form name = "RegistrationForm" novalidate>
+            <input type = "text" placeholder = "name" name = "fname" ng-model = "name" ng-required="true"/>
+            <span ng-show = "RegistrationForm.fname.$touched && RegistrationForm.fname.$invalid">Enter a valid name</span>
+            <input type = "email" placeholder = "Email" name = "mail" ng-model = "email" ng-required="true" />
+            <span ng-show = "RegistrationForm.mail.$touched && RegistrationForm.mail.$invalid">Enter a valid email</span>
+            <input type = "submit" value = "send" ng-disabled="RegistrationForm.$invalid" />
+        </form>
+    </body>
+</html>
