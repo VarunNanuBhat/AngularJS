@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+    <head>
+        <title>Filters</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script>
+            var app = angular.module("studentDetails", []);
+            app.controller("studentInfo", function($scope){            
+                $scope.student = [
+                    {usn: "103", name: "Varun"},
+                    {usn: "108", name: "Yashas"},
+                    {usn: "100", name: "Tarun"}
+            ];
+            });
+        </script>
+    </head>
+
+    <body ng-app = "studentDetails" ng-controller = "studentInfo">
+        <h1 ng-repeat = "studentDet in student">The student USN  and name is {{studentDet.usn}} : {{studentDet.name}} </h1>
+    </body>
+</html>
