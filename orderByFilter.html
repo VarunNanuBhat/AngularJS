@@ -16,6 +16,7 @@
     </head>
 
     <body ng-app = "studentDetails" ng-controller = "studentInfo">
-        <h1 ng-repeat = "studentDet in student">The student USN  and name is {{studentDet.usn}} : {{studentDet.name}} </h1>
+        <h1 ng-repeat = "studentDet in student | orderBy: 'usn'">The student USN  and name is {{studentDet.usn}} : {{studentDet.name}} </h1>
+    </body>
     </body>
 </html>
