@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+    <head>
+        <title>Window service</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<script>
+			var app = angular.module("windowService", []);
+			app.controller("windowSer", function($scope, $window){
+                $scope.openNewWindow = function(){
+                    var newUrl = "https://google.com";
+                    $window.open(newUrl, '_blank')
+                };
+			});
+		</script>
+    </head>
+
+    <body ng-app = "windowService", ng-controller = "windowSer">
+        <button ng-click = "openNewWindow()">Open new window</button>		
+    </body>
+</html>
