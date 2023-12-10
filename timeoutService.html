@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+    <head>
+        <title>timeout service</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<script>
+			var app = angular.module("timeoutService", []);
+			app.controller("timeoutSer", function($scope, $timeout){
+                $scope.text = "executing ....."
+                $timeout(function(){
+                    $scope.text = "completed ...."
+                }, 5000);
+			});
+		</script>
+    </head>
+
+    <body ng-app = "timeoutService", ng-controller = "timeoutSer">
+        <h1>{{text}}</h1>		
+    </body>
+</html>

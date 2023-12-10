@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+    <head>
+        <title>Interval service</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<script>
+			var app = angular.module("intervalService", []);
+			app.controller("intervalSer", function($scope, $interval){
+                $interval(function(){
+                    $scope.dateAndTime = new Date();
+                }, 1000);
+			});
+		</script>
+    </head>
+
+    <body ng-app = "intervalService", ng-controller = "intervalSer">
+		<h1>The date and time is {{dateAndTime | date: "dd-MM-yyyy hh:mm:ss a"}}</h1>
+    </body>
+</html>
