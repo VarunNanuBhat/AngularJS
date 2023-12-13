@@ -6,7 +6,7 @@
         <script>
             var app = angular.module("studentDetails", []);
             app.controller("studentInfo", function($scope, $http){            
-                $http.get('Data/data.json').then(function(response){
+                $http.get('data.json').then(function(response){
                     $scope.student = response.data;
                 });
             });
